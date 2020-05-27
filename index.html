@@ -10,8 +10,18 @@
     <script>
         let dojoConfig = {async : true};
     </script>
+    <script>
+        require(["esri/map", "dojo/domReady!"], function map() {
+            let myMap = new Map ("divMap", {
+                basemap: "top",
+                center: [-122.45, 37.75],
+                zoom: 12
+            })
+        })
+    </script>
 </head>
 <body>
     <h2>Hello there</h2>
+    <div id="divMap"></div>
 </body>
 </html>
